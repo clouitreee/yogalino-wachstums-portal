@@ -2,6 +2,13 @@ import { Button } from '@/components/ui/button';
 import { Heart, Star, Users, Sparkles } from 'lucide-react';
 import heroImage from '@/assets/hero-nursery.jpg';
 
+const scrollToSection = (id: string) => {
+  const element = document.querySelector(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-soft overflow-hidden">
@@ -58,6 +65,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary-glow shadow-glow text-primary-foreground font-semibold px-8 py-4 rounded-lg transition-bounce hover:scale-105"
+                onClick={() => scrollToSection('#parents')}
               >
                 Kennenlerntermin vereinbaren
               </Button>
@@ -65,6 +73,7 @@ const Hero = () => {
                 variant="outline" 
                 size="lg"
                 className="border-2 border-primary text-primary hover:bg-primary/5 px-8 py-4 rounded-lg transition-smooth"
+                onClick={() => scrollToSection('#parents')}
               >
                 Platz anfragen
               </Button>

@@ -1,0 +1,106 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 1200
+>>
+stream
+BT
+/F1 20 Tf
+50 750 Td
+(ANMELDEFORMULAR) Tj
+0 -30 Td
+/F1 16 Tf
+(Yogalino Krippe - Hannover List) Tj
+0 -60 Td
+/F1 12 Tf
+(Name des Kindes: ________________________) Tj
+0 -30 Td
+(Geburtsdatum: ________________________) Tj
+0 -30 Td
+(Name der Eltern: ________________________) Tj
+0 -30 Td
+(Adresse: ________________________) Tj
+0 -30 Td
+(Telefon: ________________________) Tj
+0 -30 Td
+(E-Mail: ________________________) Tj
+0 -30 Td
+(Gewünschter Betreuungsbeginn: ________________________) Tj
+0 -30 Td
+(Betreuungsumfang: ________________________) Tj
+0 -60 Td
+(Besondere Bedürfnisse/Allergien:) Tj
+0 -20 Td
+(________________________) Tj
+0 -20 Td
+(________________________) Tj
+0 -60 Td
+(Datum: ____________  Unterschrift: ________________________) Tj
+0 -60 Td
+/F1 10 Tf
+(Yogalino Krippe) Tj
+0 -15 Td
+(Musterstraße 123) Tj
+0 -15 Td
+(30177 Hannover List) Tj
+0 -15 Td
+(Tel: 0511 123 456 78) Tj
+0 -15 Td
+(E-Mail: info@yogalino-krippe.de) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000001524 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1593
+%%EOF

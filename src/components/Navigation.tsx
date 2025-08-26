@@ -14,6 +14,14 @@ const Navigation = () => {
     { name: 'Für Eltern', href: '#parents' },
   ];
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className="bg-background/95 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50 transition-smooth">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,23 +37,23 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => scrollToSection(item.href)}
                 className="text-muted-foreground hover:text-primary transition-smooth text-sm font-medium"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </div>
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" onClick={() => window.open('tel:051112345678')}>
               <Phone className="h-4 w-4 mr-2" />
               0511 123 456
             </Button>
-            <Button className="bg-primary hover:bg-primary-glow shadow-glow">
+            <Button onClick={() => scrollToSection('#parents')} className="bg-primary hover:bg-primary-glow shadow-glow">
               Platz anfragen
             </Button>
           </div>
@@ -67,21 +75,20 @@ const Navigation = () => {
           <div className="lg:hidden border-t border-border/50 py-4 animate-fade-in">
             <div className="space-y-4">
               {navigation.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="block text-muted-foreground hover:text-primary transition-smooth font-medium"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => scrollToSection(item.href)}
+                  className="block text-muted-foreground hover:text-primary transition-smooth font-medium text-left w-full"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full" onClick={() => window.open('tel:051112345678')}>
                   <Phone className="h-4 w-4 mr-2" />
                   0511 123 456
                 </Button>
-                <Button className="w-full bg-primary hover:bg-primary-glow">
+                <Button className="w-full bg-primary hover:bg-primary-glow" onClick={() => scrollToSection('#parents')}>
                   Platz anfragen
                 </Button>
               </div>

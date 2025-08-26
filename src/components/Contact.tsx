@@ -220,6 +220,25 @@ const Contact = () => {
                 <Button type="submit" className="w-full bg-primary hover:bg-primary-glow shadow-glow">
                   Anfrage senden
                 </Button>
+                
+                {/* PDF Download Button */}
+                <div className="pt-4 border-t border-border/50">
+                  <Button 
+                    type="button"
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/Anmeldeformular_Yogalino_Krippe.pdf';
+                      link.download = 'Anmeldeformular_Yogalino_Krippe.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    📄 Anmeldeformular herunterladen
+                  </Button>
+                </div>
               </form>
 
               {/* Trust elements */}

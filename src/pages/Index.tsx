@@ -1,7 +1,9 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Concept from '@/components/Concept';
+import Explore from '@/components/Explore';
 import Team from '@/components/Team';
+import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
 import { Button } from '@/components/ui/button';
 import { Heart, Phone, Mail } from 'lucide-react';
@@ -13,7 +15,9 @@ const Index = () => {
       <main>
         <Hero />
         <Concept />
+        <Explore />
         <Team />
+        <Blog />
         <Contact />
       </main>
       
@@ -72,6 +76,10 @@ const Index = () => {
                 <Button 
                   size="sm" 
                   className="bg-primary hover:bg-primary-glow text-primary-foreground"
+                  onClick={() => {
+                    const element = document.querySelector('#parents');
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   Jetzt Termin vereinbaren
                 </Button>
