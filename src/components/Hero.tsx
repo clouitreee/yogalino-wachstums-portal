@@ -30,17 +30,15 @@ const Hero = () => {
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-foreground">
-                Wo kleine{' '}
-                <span className="text-primary">Persönlichkeiten</span>{' '}
-                mit Achtsamkeit und{' '}
-                <span className="text-terracotta">Freude</span>{' '}
-                wachsen
+                Yogalino Krippe - Die erste{' '}
+                <span className="text-primary">Yoga-Krippe</span>{' '}
+                in{' '}
+                <span className="text-terracotta">Hannover</span>
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed">
-                In unserer Yogalino Krippe verbinden wir liebevolle Kinderbetreuung mit den wertvollen 
-                Elementen von Yoga und Achtsamkeit. Ihr Kind entwickelt sich in kleinen Gruppen 
-                individuell und ganzheitlich.
+                <strong>Unser Mantra:</strong> Yoga ist kein Ziel, Yoga ist eine Begleitung fürs Leben – von Anfang an. 
+                Mit Zeit und Geduld begleiten wir die Kinder und sind der sichere Hafen.
               </p>
             </div>
 
@@ -82,13 +80,13 @@ const Hero = () => {
 
           {/* Hero Image */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl shadow-warm">
-              <img
-                src={heroImage}
-                alt="Liebevolle Kinderbetreuung in der Yogalino Krippe"
-                className="w-full h-[600px] object-cover transition-smooth hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+            <div className="relative overflow-hidden rounded-3xl shadow-warm border border-border/30">
+              <div className="w-full h-[600px] bg-gradient-soft flex items-center justify-center">
+                <div className="text-center text-muted-foreground">
+                  <Heart className="h-24 w-24 mx-auto mb-4 opacity-50" />
+                  <span>Hero-Bild kommt bald</span>
+                </div>
+              </div>
             </div>
             
             {/* Floating testimonial card */}
@@ -99,9 +97,9 @@ const Hero = () => {
                 ))}
               </div>
               <p className="text-sm text-muted-foreground mb-2">
-                "Unser Sohn liebt es hier! Das Team ist so herzlich und die Yoga-Elemente sind wunderbar."
+                "Wir sind so dankbar für die liebevolle Betreuung. Unser Kind wächst hier mit so viel Freude und Achtsamkeit."
               </p>
-              <p className="text-xs font-medium text-foreground">Sarah M., Mutter</p>
+              <p className="text-xs font-medium text-foreground">Familie Weber</p>
             </div>
           </div>
         </div>

@@ -76,13 +76,13 @@ const Team = () => {
 
         {/* Team Photo */}
         <div className="relative mb-16">
-          <div className="overflow-hidden rounded-3xl shadow-warm max-w-4xl mx-auto">
-            <img
-              src={teamPhoto}
-              alt="Das Team der Yogalino Krippe"
-              className="w-full h-[400px] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+          <div className="overflow-hidden rounded-3xl shadow-warm max-w-4xl mx-auto border border-border/30">
+            <div className="w-full h-[400px] bg-gradient-soft flex items-center justify-center">
+              <div className="text-center text-muted-foreground">
+                <Users className="h-24 w-24 mx-auto mb-4 opacity-50" />
+                <span>Team-Foto kommt bald</span>
+              </div>
+            </div>
           </div>
           
           {/* Team Stats */}
@@ -94,8 +94,8 @@ const Team = () => {
                   <div className="text-sm text-muted-foreground">Jahre Erfahrung</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-terracotta">4</div>
-                  <div className="text-sm text-muted-foreground">Fachkräfte</div>
+                  <div className="text-2xl font-bold text-terracotta">10</div>
+                  <div className="text-sm text-muted-foreground">Erziehende Kräfte</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">100%</div>
@@ -171,7 +171,14 @@ const Team = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-primary hover:bg-primary-glow shadow-glow">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary-glow shadow-glow"
+              onClick={() => {
+                const element = document.querySelector('#parents');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Lernen Sie uns persönlich kennen
             </Button>
           </div>

@@ -86,8 +86,11 @@ const Blog = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Image placeholder */}
-              <div className="aspect-video bg-gradient-nature rounded-t-lg flex items-center justify-center text-primary-foreground">
-                <post.icon className="h-16 w-16 opacity-80" />
+              <div className="aspect-video bg-gradient-nature rounded-t-lg flex items-center justify-center text-primary-foreground border border-border/30">
+                <div className="text-center">
+                  <post.icon className="h-16 w-16 opacity-80 mx-auto mb-2" />
+                  <span className="text-sm opacity-70">Bild kommt bald</span>
+                </div>
               </div>
               
               <CardHeader className="pb-2">

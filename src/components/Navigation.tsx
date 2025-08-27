@@ -49,9 +49,9 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm" onClick={() => window.open('tel:051112345678')}>
+            <Button variant="outline" size="sm" onClick={() => window.open('tel:051194067881')}>
               <Phone className="h-4 w-4 mr-2" />
-              0511 123 456
+              0511/940 678 81
             </Button>
             <Button onClick={() => scrollToSection('#parents')} className="bg-primary hover:bg-primary-glow shadow-glow">
               Platz anfragen
@@ -84,9 +84,9 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="outline" className="w-full" onClick={() => window.open('tel:051112345678')}>
+                <Button variant="outline" className="w-full" onClick={() => window.open('tel:051194067881')}>
                   <Phone className="h-4 w-4 mr-2" />
-                  0511 123 456
+                  0511/940 678 81
                 </Button>
                 <Button className="w-full bg-primary hover:bg-primary-glow" onClick={() => scrollToSection('#parents')}>
                   Platz anfragen

@@ -36,28 +36,20 @@ const Explore = () => {
 
   const groups = [
     {
-      name: "Schmetterlinge",
-      ageRange: "8-18 Monate",
-      description: "Unsere jüngsten Entdecker in einer besonders beschützten Atmosphäre",
+      name: "Sonnengruppe",
+      ageRange: "0-3 Jahre",
+      description: "Der Gruppenraum zeichnet sich über seine erdigen Farben und organischen Materialien aus",
       color: "bg-gradient-to-br from-primary/20 to-primary/10",
-      maxChildren: 6,
-      caregivers: 2
+      maxChildren: 15,
+      caregivers: "Qualifizierte Fachkräfte"
     },
     {
-      name: "Bienchen",
-      ageRange: "18-24 Monate", 
-      description: "Aktive Forscher, die die Welt mit allen Sinnen erkunden",
+      name: "Mondgruppe",
+      ageRange: "0-3 Jahre", 
+      description: "Der Gruppenraum II ist sehr lebendig und vielfältig",
       color: "bg-gradient-to-br from-terracotta/20 to-terracotta/10",
-      maxChildren: 8,
-      caregivers: 2
-    },
-    {
-      name: "Käferchen",
-      ageRange: "2-3 Jahre",
-      description: "Unsere großen Kleinen, die bereits erste Freundschaften schließen",
-      color: "bg-gradient-to-br from-accent/30 to-accent/20",
-      maxChildren: 8,
-      caregivers: 2
+      maxChildren: 15,
+      caregivers: "Qualifizierte Fachkräfte"
     }
   ];
 
@@ -106,8 +98,11 @@ const Explore = () => {
             {rooms.map((room, index) => (
               <Card key={room.name} className="border-0 shadow-card hover:shadow-warm transition-all duration-300 bg-card" style={{ animationDelay: `${index * 100}ms` }}>
                 {/* Room Image Placeholder */}
-                <div className="aspect-video bg-gradient-soft rounded-t-lg flex items-center justify-center">
-                  <room.icon className="h-16 w-16 text-primary" />
+                <div className="aspect-video bg-gradient-soft rounded-t-lg flex items-center justify-center border border-border/30">
+                  <div className="text-center text-muted-foreground">
+                    <room.icon className="h-16 w-16 mx-auto mb-2 opacity-50" />
+                    <span className="text-sm">Bild kommt bald</span>
+                  </div>
                 </div>
                 
                 <CardHeader>
@@ -144,7 +139,7 @@ const Explore = () => {
           <h3 className="text-2xl font-bold text-center text-foreground mb-12">
             Unsere Gruppen - Klein, familiär und liebevoll betreut
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+                 <div className="grid md:grid-cols-2 gap-8">
             {groups.map((group, index) => (
               <Card key={group.name} className="border-0 shadow-card hover:shadow-warm transition-all duration-300" style={{ animationDelay: `${index * 150}ms` }}>
                 <CardHeader className={`${group.color} rounded-t-lg`}>
@@ -169,10 +164,6 @@ const Explore = () => {
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-medium text-muted-foreground">Betreuer:</span>
                       <span className="font-semibold text-foreground">{group.caregivers}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-muted-foreground">Betreuungsschlüssel:</span>
-                      <span className="font-semibold text-primary">1:{group.maxChildren/group.caregivers}</span>
                     </div>
                   </div>
                 </CardContent>

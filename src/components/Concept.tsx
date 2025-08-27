@@ -63,8 +63,9 @@ const Concept = () => {
             <span className="text-primary">Konzept</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Wir verbinden bewährte pädagogische Ansätze mit den wertvollen Elementen von Yoga und Achtsamkeit. 
-            So schaffen wir eine Umgebung, in der Ihr Kind mit Freude und in seinem eigenen Tempo wachsen kann.
+            Die Arbeit in unserer Einrichtung orientiert sich an dem situationsorientierten Ansatz und dem 
+            „Niedersächsischen Kindertagesstättengesetz" (NKiTaG) sowie dem Niedersächsischen Bildungsplan. 
+            Durch einen liebevollen, zugewandten und zuverlässigen Umgang können wir Freiraum geben.
           </p>
         </div>
 
@@ -127,8 +128,17 @@ const Concept = () => {
               variant="secondary"
               size="lg"
               className="bg-background text-foreground hover:bg-background/90 shadow-card"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = 'https://yogalino-krippe.de/wp-content/uploads/2023/12/Yogalino_Kinderbalance.pdf';
+                link.download = 'Yogalino_Kinderbalance.pdf';
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
-              Detailliertes Konzept herunterladen
+              Detailliertes Konzept herunterladen (8MB)
             </Button>
           </div>
         </div>

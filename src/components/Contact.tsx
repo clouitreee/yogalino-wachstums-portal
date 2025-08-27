@@ -46,25 +46,25 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Adresse",
-      details: ["Yogalino Krippe", "Musterstraße 123", "30177 Hannover List"],
+      details: ["Yogalino Krippe", "Hannover Misburg", "30627 Hannover"],
       color: "text-primary"
     },
     {
       icon: Phone,
       title: "Telefon",
-      details: ["0511 123 456 78", "Mo-Fr: 7:30 - 16:00 Uhr"],
+      details: ["0511/940 678 81", "Mo-Fr: 8:00 - 16:00 Uhr"],
       color: "text-terracotta"
     },
     {
       icon: Mail,
       title: "E-Mail", 
-      details: ["info@yogalino-krippe.de", "Antwort innerhalb 24h"],
+      details: ["yogalino@kila-ini.de", "Antwort innerhalb 24h"],
       color: "text-primary"
     },
     {
       icon: Clock,
       title: "Öffnungszeiten",
-      details: ["Mo-Fr: 7:30 - 16:00 Uhr", "Flexible Abholzeiten"],
+      details: ["Mo-Fr: 8:00 - 16:00 Uhr", "Flexible Abholzeiten"],
       color: "text-terracotta"
     }
   ];
@@ -226,11 +226,11 @@ const Contact = () => {
                   <Button 
                     type="button"
                     variant="outline"
-                    className="w-full"
+                    className="w-full border-2 border-primary text-primary hover:bg-primary/5 transition-smooth"
                     onClick={() => {
                       const link = document.createElement('a');
-                      link.href = '/Anmeldeformular_Yogalino_Krippe.pdf';
-                      link.download = 'Anmeldeformular_Yogalino_Krippe.pdf';
+                      link.href = 'https://yogalino-krippe.de/wp-content/uploads/2024/02/Anmeldeformular-Yogalino-Krippe.pdf';
+                      link.download = 'Anmeldeformular-Yogalino-Krippe.pdf';
                       document.body.appendChild(link);
                       link.click();
                       document.body.removeChild(link);
@@ -238,6 +238,22 @@ const Contact = () => {
                   >
                     📄 Anmeldeformular herunterladen
                   </Button>
+                  
+                  {/* Link to city portal */}
+                  <div className="mt-4 p-4 bg-secondary/30 rounded-lg">
+                    <p className="text-sm text-muted-foreground text-center">
+                      Die offizielle Anmeldung für einen Krippenplatz in Hannover erfolgt zentral über das{' '}
+                      <a 
+                        href="https://www.kinderbetreuung-hannover.de/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-primary-glow font-medium underline transition-smooth"
+                      >
+                        Online-Portal der Stadt
+                      </a>. 
+                      Bitte registrieren Sie sich auch dort.
+                    </p>
+                  </div>
                 </div>
               </form>
 
@@ -255,7 +271,7 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Contact Info & Map */}
+                {/* Contact Info & Map */}
           <div className="space-y-8">
             
             {/* Contact Cards */}
@@ -284,27 +300,41 @@ const Contact = () => {
                   <div className="text-center">
                     <MapPin className="h-12 w-12 mx-auto mb-4" />
                     <h4 className="text-lg font-semibold mb-2">Yogalino Krippe</h4>
-                    <p>Musterstraße 123, 30177 Hannover List</p>
+                    <p>Hannover Misburg</p>
+                    <p>30627 Hannover</p>
                     <p className="text-sm mt-2 opacity-90">
-                      Direkt an der U-Bahn Station List • Kostenlose Parkplätze
+                      Direkte Anbindung • Gute Erreichbarkeit
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Additional Info */}
+            {/* Additional Info - Wirkung von Yoga */}
             <Card className="border-0 shadow-card bg-gradient-soft">
               <CardContent className="p-6">
                 <h4 className="font-semibold text-foreground mb-4 text-center">
-                  💡 Gut zu wissen
+                  ✨ Wirkung von Yoga
                 </h4>
                 <div className="space-y-3 text-sm text-muted-foreground">
-                  <p>• <strong>Kostenlose Schnupperstunde:</strong> Lernen Sie uns unverbindlich kennen</p>
-                  <p>• <strong>Flexible Betreuungszeiten:</strong> Angepasst an Ihren Bedarf</p>
-                  <p>• <strong>Bio-Vollverpflegung:</strong> Frisch zubereitet in unserer Küche</p>
-                  <p>• <strong>Kleine Gruppen:</strong> Maximal 8 Kinder pro Gruppe</p>
+                  <p><strong>Selbstbewusster:</strong> Yoga in der Yogalino Krippe Hannover macht mutig, stark und sicher. Hier kann jedes Kind in seinem eigenem Tempo bleiben.</p>
+                  <p><strong>Nachhaltigkeit:</strong> Beim Kinderyoga geht es vor allem um Spaß, Entspannung und Phantasie. Die Kinder können ganz sie selbst sein.</p>
+                  <p><strong>Körperliche Entwicklung:</strong> Regelmäßige Bewegung regt im Gehirn die Entstehung neuer Nervenzellen an, was den Lernprozess unterstützt.</p>
+                  <p><strong>Beziehung statt Erziehung:</strong> Durch einen liebevollen, zugewandten und zuverlässigen Umgang können wir Freiraum geben.</p>
                 </div>
+              </CardContent>
+            </Card>
+
+            {/* Zusammenarbeit mit Eltern */}
+            <Card className="border-0 shadow-card bg-gradient-warm">
+              <CardContent className="p-6">
+                <h4 className="font-semibold text-foreground mb-4 text-center">
+                  🤝 Zusammenarbeit mit den Eltern
+                </h4>
+                <p className="text-sm text-muted-foreground text-center">
+                  Uns ist es wichtig, einen offenen und vertrauensvollen Austausch mit den Eltern zu führen, 
+                  damit wir unsere pädagogischen Ziele erreichen können.
+                </p>
               </CardContent>
             </Card>
           </div>

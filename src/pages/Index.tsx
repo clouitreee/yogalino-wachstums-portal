@@ -64,11 +64,11 @@ const Index = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 justify-center md:justify-start">
                   <Phone className="h-4 w-4 text-primary" />
-                  <span className="text-sm">0511 123 456 78</span>
+                  <span className="text-sm">0511/940 678 81</span>
                 </div>
                 <div className="flex items-center space-x-3 justify-center md:justify-start">
                   <Mail className="h-4 w-4 text-primary" />
-                  <span className="text-sm">info@yogalino-krippe.de</span>
+                  <span className="text-sm">yogalino@kila-ini.de</span>
                 </div>
               </div>
               
